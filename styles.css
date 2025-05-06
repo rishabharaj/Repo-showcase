@@ -1,0 +1,110 @@
+@font-face {
+    src: url('fonts/Sga-Regular.woff2') format('woff2'),
+         url('fonts/Sga-Regular.woff') format('woff'),
+         url('fonts/Sga-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Sga Regular';
+}
+
+body.sga {
+    font-family: 'Sga Regular';
+}
+
+body.sans-serif {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e1e2f, #121212);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.description {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(30, 30, 30, 0.95);
+    padding: 15px 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.description strong {
+    color: #00ffcc;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.description p {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.description a {
+    color: #66ffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #66ffff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.description a:hover {
+    background: #66ffff;
+    color: #1e1e2f;
+}
+
+#controlPanel {
+    z-index: 1000;
+    max-width: 300px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(30, 30, 30, 0.95);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#controlPanel ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+#controlPanel ul li {
+    margin: 8px 0;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+#controlPanel ul li:hover {
+    color: #00ffcc;
+}
+
+@media(min-width: 768px) {
+    #controlPanel {
+        display: block;
+    }
+}
+
+body.sga #controlPanel,
+body.sga .description {
+    font-size: 14px;
+}
+
+body.sans-serif #controlPanel,
+body.sans-serif .description {
+    font-size: 12px;
+}
